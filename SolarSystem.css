@@ -1,0 +1,251 @@
+:root{
+    --azul-espaco:#06002b
+}
+*{  
+  overflow: hidden;
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+header img{
+  z-index: 2;
+  margin-top: 1%;
+  width: 2vw;
+}
+header img:hover{
+  cursor: pointer;
+  filter: blur(1px);
+}
+body{
+    background: radial-gradient(circle at center, #05002d 1%, #00001e 100%);
+}
+#solarSystem{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*Card informativo*/
+#cardInformativo{
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  transition: max-height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.738);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.624);
+  border-radius: 10px;
+}
+#cardInformativo p{
+  margin: 1% 2%;
+  width: 1vw;
+}
+#cardInformativo p:hover{
+  cursor: pointer;
+  color: gray;
+}
+#cardInformativo h1{
+  margin: 1%;
+  color: white;
+}
+#cardInformativo h4{
+  margin: 2%;
+  color: white;
+}
+#infos {
+  padding-left: 5%;
+}
+#infos li{
+  padding: 1%;
+}
+
+
+/*Responsividade*/
+@media(max-width: 768px){
+  #cardInformativo{
+    width: 75%;
+  }
+  #cardInformativo p{
+    width: 2.5vw;
+  }
+  #infos li{
+  padding: 2%;
+ }
+ header img{
+  z-index: 2;
+  margin-top: 5%;
+  width: 7vw;
+}
+}
+
+
+/*Planetas*/
+#sun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    animation: pulsar 2s infinite ease-in-out;
+}
+@keyframes pulsar{
+  0%{width: 10%;}
+  50%{width: 12%;}
+  100%{width: 10%;}
+}
+.planeta:hover{
+  cursor: pointer;
+}
+#mercury{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: orbitaMercury 2.0s linear infinite;
+  width: 1%;
+}
+#venus{
+    position: absolute;
+    width: 2%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaVenus 4.0s linear infinite;
+}
+#earth{ 
+    position: absolute;
+    width: 3%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaEarth 6s linear infinite;
+
+}
+#mars{
+    position: absolute;
+    width: 1.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaMars 8s linear infinite;
+}
+#jupter{
+    position: absolute;
+    width: 8%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaJupter 10s linear infinite;
+    
+}
+#saturn{
+    position: absolute;
+    width: 8%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaSaturn 13s linear infinite;
+}
+#uranus{
+    position: absolute;
+    width: 7%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaUranus 15s linear infinite;
+}
+#neptune{
+    position: absolute;
+    width: 6.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    animation: orbitaNeptune 17s linear infinite;
+}
+
+
+/*Animação Planetas*/
+@keyframes orbitaMercury{
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(6vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(6vw); }
+}
+@keyframes orbitaVenus {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(8vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(8vw); }
+}
+@keyframes orbitaEarth {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(11vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(11vw); }
+}
+@keyframes orbitaMars {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(14vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(14vw); }
+}
+@keyframes orbitaJupter {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(20vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(20vw); }
+}
+@keyframes orbitaSaturn{
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(29vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(29vw); }
+}
+@keyframes orbitaUranus{
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(37vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(37vw); }
+}
+@keyframes orbitaNeptune{
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(44vw); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(44vw); }
+}
+
+
+/*Controle*/
+#controle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 75%;
+  position: absolute;
+  align-self: center;
+  width: 100%;
+  height: 10%;
+}
+#buttons{
+  gap: 5%;
+  justify-content: space-between;
+  display: flex;
+  width: 45%;
+  height: 80%;
+}
+.button{
+  background-color: orchid;
+  border: solid rgba(255, 255, 255, 0.635) 2px;
+  color: white;
+  border-radius: 10px;
+  width: 90vw;
+  background-color: #00001e90;
+}
+@media(max-width: 600px){
+  #buttons{
+    width: 70vw;
+  }
+}
+.button:hover{
+  cursor: pointer;
+  color: rgb(146, 146, 146);
+  background-color: #040033d6;
+
+}

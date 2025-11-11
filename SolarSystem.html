@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="SolarSystem.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+        <img src="src/i icon.svg" onclick="sobre()">
+</header>
+<div id="solarSystem">
+    <div id="cardInformativo">
+        <p onclick="fecharCard()">x</p>
+        <h1 id="nomePlaneta"></h1>
+        <ol id="infos">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <img src="src/sun.svg" id="sun" class="planeta" onclick="sun()">
+    <img src="src/mercury.svg" id="mercury" class="planeta" onclick="mercury()">
+    <img src="src/venus.svg" id="venus" class="planeta" onclick="venus()">
+    <img src="src/earth.svg" id="earth" class="planeta" onclick="earth()">
+    <img src="src/mars.svg" id="mars" class="planeta" onclick="mars()">
+    <img src="src/jupter.svg" id="jupter" class="planeta" onclick="jupter()">
+    <img src="src/saturn.svg" id="saturn" class="planeta" onclick="saturn()">
+    <img src="src/uranus.svg" id="uranus" class="planeta" onclick="uranus()">
+    <img src="src/neptune.svg" id="neptune" class="planeta" onclick="neptune()">
+</div>
+<div id="controle">
+    <div id="buttons">
+        <button class="button" id="leftButton">
+            <span class="material-symbols-outlined" style="rotate: 180deg;">double_arrow</span>
+        </button>
+        <button class="button" id="pauseButton">
+            <span class="material-symbols-outlined">play_pause</span>
+        </button>
+        <button class="button" id="rightButton">
+            <span class="material-symbols-outlined">double_arrow<span>
+        </button>
+    </div>
+<script src="SolarSystem.js"></script>
+<script src="SolarSystemInfos.js"></script>
+</body>
+</html>
