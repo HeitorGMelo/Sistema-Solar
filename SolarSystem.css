@@ -242,6 +242,15 @@ body{
   #buttons{
     width: 70vw;
   }
+  #cardInformativo{
+    width: 90%; 
+    overflow-y: auto; 
+  }
+
+  #infos li{
+    padding: 2%;
+    font-size: 14px;
+  }
 }
 .button:hover{
   cursor: pointer;
